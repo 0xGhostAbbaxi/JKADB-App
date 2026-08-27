@@ -1,0 +1,6 @@
+{
+  "appId": "com.majorforce.jkadb",
+  "appName": "JKADB",
+  "webDir": "www",
+  "bundledWebRuntime": false
+}

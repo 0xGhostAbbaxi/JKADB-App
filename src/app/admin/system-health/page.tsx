@@ -1,0 +1,3 @@
+"use client";
+import { useEffect, useState } from "react";
+export default function Health(){const [d,setD]=useState<any>(null);useEffect(()=>{fetch("/api/health").then(r=>r.json()).then(setD)},[]);return <div className="space-y-6"><div><h1 className="text-2xl font-black">System Health</h1><p className="text-sm text-slate-500">Safe operational status only.</p></div><div className="grid gap-4 md:grid-cols-3">{[["Backend",true],["Database",d?.database],["AI",Boolean(d?.ai)]].map(([name,ok])=><div key={String(name)} className="rounded-2xl border bg-white p-5"><p className="text-sm text-slate-500">{name}</p><p className={`mt-2 font-bold ${ok?"text-green-700":"text-red-700"}`}>{ok?"Operational":"Problem"}</p></div>)}</div></div>}
