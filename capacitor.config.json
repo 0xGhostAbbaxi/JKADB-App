@@ -2,5 +2,9 @@
   "appId": "com.majorforce.jkadb",
   "appName": "JKADB",
   "webDir": "www",
-  "bundledWebRuntime": false
+  "bundledWebRuntime": false,
+  "server": {
+    "url": "https://jkadb.vercel.app",
+    "cleartext": true
+  }
 }
